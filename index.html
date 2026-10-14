@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>City Kebab Pizza Kallio — Open Till 4 AM · Vaasankatu, Helsinki</title>
+<meta name="description" content="City Kebab Pizza Kallio on Vaasankatu 19 B — kebab and pizza in the heart of Kallio, open till 4 AM. The night kitchen of Helsinki's liveliest street. Call and order now.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "City Kebab Pizza Kallio",
+  "servesCuisine": ["Kebab", "Pizza"],
+  "priceRange": "€10-15",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Vaasankatu 19 B",
+    "addressLocality": "Helsinki",
+    "postalCode": "00510",
+    "addressCountry": "FI"
+  },
+  "openingHours": "Mo-Su 10:00-04:00",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "3.6", "reviewCount": "60" }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --neon:#2ee6ff; --neon2:#ff2ec4; --night:#0a0a12; --panel:#12121d; --line:#23233a;
+  --txt:#e8ecff; --dim:#8b90b3;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--night);color:var(--txt);padding-bottom:84px}
+.bebas{font-family:'Bebas Neue',sans-serif;letter-spacing:.02em}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+/* top bar */
+.topbar{position:sticky;top:0;z-index:60;background:rgba(10,10,18,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+.logo{font-family:'Bebas Neue';font-size:22px;text-transform:uppercase;color:var(--neon);text-shadow:0 0 12px rgba(46,230,255,.6)}
+.lang{background:transparent;border:1px solid var(--neon);color:var(--neon);font-weight:800;font-size:12px;padding:5px 12px;border-radius:999px;cursor:pointer;letter-spacing:.06em}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:70px 0 60px;background:
+  radial-gradient(ellipse at 20% 0%,rgba(255,46,196,.16),transparent 50%),
+  radial-gradient(ellipse at 90% 30%,rgba(46,230,255,.14),transparent 50%),var(--night)}
+.hero .kicker{color:var(--neon2);font-weight:800;letter-spacing:.28em;font-size:12px;text-transform:uppercase;margin-bottom:16px;text-shadow:0 0 14px rgba(255,46,196,.7)}
+.hero h1{font-size:clamp(54px,15vw,96px);line-height:.88;color:#fff;text-shadow:0 0 30px rgba(46,230,255,.35)}
+.hero h1 .neon{color:var(--neon);text-shadow:0 0 10px rgba(46,230,255,.9),0 0 40px rgba(46,230,255,.45)}
+.hero p.sub{margin:20px 0 26px;font-size:16px;max-width:36ch;color:var(--dim);font-weight:600}
+.cta{display:inline-block;background:var(--neon);color:#04222b;font-family:'Bebas Neue';font-size:22px;letter-spacing:.06em;padding:14px 34px 12px;border-radius:10px;text-decoration:none;box-shadow:0 0 26px rgba(46,230,255,.5);transition:transform .15s}
+.cta:active{transform:scale(.96)}
+.micro{margin-top:14px;font-size:13px;color:var(--dim);font-weight:600}
+/* open till 4AM banner */
+.fouram{background:linear-gradient(90deg,var(--neon2),#7a2eff);color:#fff;text-align:center;padding:22px 16px;box-shadow:0 0 40px rgba(255,46,196,.35)}
+.fouram .big{font-family:'Bebas Neue';font-size:clamp(34px,9vw,54px);line-height:1}
+.fouram small{display:block;font-family:'Inter';font-weight:800;letter-spacing:.2em;font-size:11px;text-transform:uppercase;opacity:.85;margin-top:4px}
+/* sections */
+.kick{color:var(--neon2);font-weight:800;letter-spacing:.28em;font-size:11px;text-transform:uppercase;margin-bottom:10px;text-shadow:0 0 12px rgba(255,46,196,.5)}
+h2{font-family:'Bebas Neue';font-size:clamp(38px,10vw,56px);margin-bottom:22px;line-height:.95;color:#fff}
+h2 .neon{color:var(--neon)}
+/* menu */
+.mitem{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px;transition:border-color .2s}
+.mitem:active{border-color:var(--neon)}
+.mitem .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.mitem h3{font-family:'Bebas Neue';text-transform:uppercase;font-size:19px;letter-spacing:.04em;color:#fff}
+.mitem .price{font-family:'Bebas Neue';font-size:19px;color:var(--neon);white-space:nowrap}
+.mitem p{font-size:13.5px;color:var(--dim);margin-top:6px;line-height:1.5}
+/* gallery */
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ph{border-radius:14px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:34px;position:relative;overflow:hidden;border:1px solid var(--line)}
+.ph::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 15%,rgba(46,230,255,.25),transparent 55%)}
+.ph.big{grid-column:1/-1;aspect-ratio:16/8}
+.ph span{position:relative;z-index:1;filter:drop-shadow(0 0 12px rgba(46,230,255,.6))}
+/* review saver */
+.reviewbox{background:var(--panel);border:1px solid var(--neon);border-radius:16px;padding:24px;text-align:center;box-shadow:0 0 30px rgba(46,230,255,.12)}
+.reviewbox .score{font-family:'Bebas Neue';font-size:52px;color:var(--neon)}
+.reviewbox p{font-size:14px;color:var(--dim);margin:10px auto 18px;max-width:38ch;line-height:1.6}
+.rbtn{display:inline-block;background:#fff;color:#111;text-decoration:none;font-weight:800;font-size:14px;padding:13px 26px;border-radius:999px}
+/* hours + map */
+.hrow{display:flex;justify-content:space-between;padding:13px 4px;border-bottom:1px dashed var(--line);font-weight:600;font-size:15px}
+.hrow.today{color:var(--neon);font-weight:800}
+.hrow.today::before{content:"● ";font-size:10px;vertical-align:2px}
+.mapbox{margin-top:26px;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 0 26px rgba(255,46,196,.15)}
+.mapbox iframe{width:100%;height:260px;border:0;display:block;filter:grayscale(.4) contrast(1.1)}
+.addr{text-align:center;margin-top:14px;font-weight:700;font-size:15px}
+.addr small{display:block;color:var(--dim);font-weight:600;margin-top:3px}
+/* contact */
+.contact{text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(255,46,196,.12),transparent 60%),var(--night)}
+.cbtns{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.cbtn{background:var(--neon);color:#04222b;text-decoration:none;font-family:'Bebas Neue';font-size:20px;letter-spacing:.06em;padding:15px;border-radius:12px}
+.cbtn.ghost{background:transparent;border:1px solid var(--neon2);color:var(--neon2)}
+/* sticky */
+.stickybar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:flex;background:#05050b;border-top:1px solid var(--neon);box-shadow:0 -6px 30px rgba(46,230,255,.15)}
+.stickybar a{flex:1;text-align:center;padding:14px 4px 16px;text-decoration:none;color:var(--txt);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.stickybar a + a{border-left:1px solid var(--line)}
+.stickybar .ico{display:block;font-size:20px;margin-bottom:3px}
+.stickybar a.wa{background:var(--neon);color:#04222b}
+footer{background:#05050b;color:var(--dim);text-align:center;font-size:11.5px;padding:20px 16px 100px;line-height:1.7}
+@media(min-width:640px){.cbtns{flex-direction:row;justify-content:center}.cbtn{padding:15px 36px}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">City Kebab · Kallio</div>
+  <button class="lang" id="langBtn" data-en="FI" data-fi="EN" onclick="toggleLang()">FI</button>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker" data-en="Kallio · Vaasankatu 19 B" data-fi="Kallio · Vaasankatu 19 B">Kallio · Vaasankatu 19 B</div>
+    <h1><span class="neon" data-en="When the city sleeps," data-fi="Kun kaupunki nukkuu,">When the city sleeps,</span><br><span data-en="we're just warming up" data-fi="me vasta lämmittelemme">we're just warming up</span></h1>
+    <p class="sub" data-en="Kebab and pizza on Kallio's liveliest street — hot, fast, and the last kitchen open on the block." data-fi="Kebabia ja pizzaa Kallion vilkkaimmalla kadulla — kuumaa, nopeaa ja viimeinen keittiö joka on auki.">Kebab and pizza on Kallio's liveliest street — hot, fast, and the last kitchen open on the block.</p>
+    <a class="cta" href="#order" data-en="CALL / ORDER NOW" data-fi="SOITA / TILAA NYT">CALL / ORDER NOW</a>
+    <div class="micro" data-en="⭐ 3.6 · 60 reviews · right in the heart of Kallio" data-fi="⭐ 3.6 · 60 arvostelua · Kallion sydämessä">⭐ 3.6 · 60 reviews · right in the heart of Kallio</div>
+  </div>
+</section>
+
+<div class="fouram">
+  <div class="big">OPEN TILL 4:00 AM</div>
+  <small data-en="Every single night" data-fi="Joka ikinen yö">Every single night</small>
+</div>
+
+<section class="about">
+  <div class="wrap">
+    <div class="kick" data-en="The night kitchen of Kallio" data-fi="Kallion yökeittiö">The night kitchen of Kallio</div>
+    <h2 data-en="After the party, <span class='neon'>before the sunrise</span>" data-fi="Bileiden jälkeen, <span class='neon'>auringonnousua ennen</span>">After the party, <span class="neon">before the sunrise</span></h2>
+    <p style="color:var(--dim);line-height:1.7;font-size:15.5px" data-en="Bars close, the street empties — and City Kebab is still spinning dough and carving kebab. Whether it's a late shift, a long night out or a sudden 2 AM craving: we're the light still on at Vaasankatu." data-fi="Baarit sulkeutuvat, katu tyhjenee — ja City Kebab pyörittää edelleen taikinaa ja leikkaa kebabia. Myöhäinen vuoro, pitkä ilta tai äkkinäinen kello 2:n nälkä: me olemme se valo joka palaa Vaasankadulla.">Bars close, the street empties — and City Kebab is still spinning dough and carving kebab. Whether it's a late shift, a long night out or a sudden 2 AM craving: we're the light still on at Vaasankatu.</p>
+  </div>
+</section>
+
+<section class="menusec">
+  <div class="wrap">
+    <div class="kick" data-en="Night menu" data-fi="Yölista">Night menu</div>
+    <h2 data-en="Readable at 3 <span class='neon'>AM</span>" data-fi="Luettavissa klo 3 <span class='neon'>yöllä</span>">Readable at 3 <span class="neon">AM</span></h2>
+    <div class="mitem">
+      <div class="row"><h3 data-en="Kebab plate" data-fi="Kebab-annos">Kebab plate</h3><span class="price">[PREZZO]</span></div>
+      <p data-en="Spit-roasted meat, rice or fries, salad, sauces." data-fi="Grillilihaa, riisiä tai ranskalaisia, salaattia, kastikkeita.">Spit-roasted meat, rice or fries, salad, sauces.</p>
+    </div>
+    <div class="mitem">
+      <div class="row"><h3 data-en="Kebab rulla" data-fi="Kebab-rulla">Kebab rulla</h3><span class="price">[PREZZO]</span></div>
+      <p data-en="The 2 AM classic — everything rolled tight and warm." data-fi="Kello 2:n yön klassikko — kaikki käärittynä tiukaksi ja lämpimäksi.">The 2 AM classic — everything rolled tight and warm.</p>
+    </div>
+    <div class="mitem">
+      <div class="row"><h3 data-en="Pizza" data-fi="Pizza">Pizza</h3><span class="price">[PREZZO]</span></div>
+      <p data-en="Stone-oven, fresh dough, generous toppings." data-fi="Kiviuunista, tuoretta taikinaa, runsaat täytteet.">Stone-oven, fresh dough, generous toppings.</p>
+    </div>
+    <div class="mitem">
+      <div class="row"><h3 data-en="Fries & snacks" data-fi="Ranskalaiset & naposteltavat">Fries & snacks</h3><span class="price">[PREZZO]</span></div>
+      <p data-en="Golden fries and late-night sides." data-fi="Kultaisia ranskalaisia ja yömyöhäisiä lisukkeita.">Golden fries and late-night sides.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallerysec">
+  <div class="wrap">
+    <div class="kick" data-en="Under the neon" data-fi="Neonvalojen alla">Under the neon</div>
+    <h2 data-en="Hot & <span class='neon'>ready</span>" data-fi="Kuumaa & <span class='neon'>valmista</span>">Hot & <span class="neon">ready</span></h2>
+    <div class="gal">
+      <div class="ph big" style="background:linear-gradient(135deg,#1a2f4a,#0a0a12)"><span>🌃</span></div>
+      <div class="ph" style="background:linear-gradient(135deg,#0f3d4d,#0a0a12)"><span>🥙</span></div>
+      <div class="ph" style="background:linear-gradient(135deg,#3d0f38,#0a0a12)"><span>🍕</span></div>
+      <div class="ph" style="background:linear-gradient(135deg,#23233a,#0a0a12)"><span>🍟</span></div>
+      <div class="ph" style="background:linear-gradient(135deg,#402a0f,#0a0a12)"><span>🌯</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kick" data-en="Your opinion matters" data-fi="Mielipiteesi on tärkeä">Your opinion matters</div>
+    <h2 data-en="Loved your <span class='neon'>night bite?</span>" data-fi="Tykkäsitkö <span class='neon'>yöpalasta?</span>">Loved your <span class="neon">night bite?</span></h2>
+    <div class="reviewbox">
+      <div class="score">3.6★</div>
+      <p data-en="60 Google reviews and counting. One minute of your time helps the whole neighbourhood find the best late-night kitchen in Kallio." data-fi="60 Google-arvostelua ja lisää tulossa. Yksi minuuttisi auttaa koko kaupunginosaa löytämään Kallion parhaan yökeittiön.">60 Google reviews and counting. One minute of your time helps the whole neighbourhood find the best late-night kitchen in Kallio.</p>
+      <a class="rbtn" href="https://www.google.com/maps/search/City+Kebab+Pizza+Kallio+Vaasankatu+19" target="_blank" rel="noopener" data-en="⭐ Leave us a Google review" data-fi="⭐ Jätä meille Google-arvostelu">⭐ Leave us a Google review</a>
+    </div>
+  </div>
+</section>
+
+<section class="hoursmap">
+  <div class="wrap">
+    <div class="kick" data-en="Find us in Kallio" data-fi="Löydä meidät Kalliosta">Find us in Kallio</div>
+    <h2 data-en="Vaasankatu <span class='neon'>19 B</span>" data-fi="Vaasankatu <span class='neon'>19 B</span>">Vaasankatu <span class="neon">19 B</span></h2>
+    <div class="hrow today"><span data-en="Monday – Sunday" data-fi="Maanantai – sunnuntai">Monday – Sunday</span><span data-en="till 4:00 [ORARI]" data-fi="klo 4 asti [ORARI]">till 4:00 [ORARI]</span></div>
+    <div class="mapbox">
+      <iframe title="City Kebab Pizza Kallio map" src="https://maps.google.com/maps?q=Vaasankatu%2019%20B%2C%2000510%20Helsinki&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+    </div>
+    <div class="addr">
+      📍 Vaasankatu 19 B, 00510 Helsinki — Kallio
+      <small data-en="In the middle of Kallio's night life" data-fi="Kallion yöelämän keskellä">In the middle of Kallio's night life</small>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="order">
+  <div class="wrap">
+    <div class="kick" data-en="Straight to us" data-fi="Suoraan meille">Straight to us</div>
+    <h2 data-en="No apps. <span class='neon'>No fees.</span>" data-fi="Ei appeja. <span class='neon'>Ei maksuja.</span>">No apps. <span class="neon">No fees.</span></h2>
+    <p style="max-width:40ch;margin:0 auto;color:var(--dim);font-weight:600" data-en="Call or WhatsApp your order directly — faster, cheaper, and the food is just as hot." data-fi="Soita tai WhatsAppaa tilauksesi suoraan — nopeampaa, halvempaa, ja ruoka on yhtä kuumaa.">Call or WhatsApp your order directly — faster, cheaper, and the food is just as hot.</p>
+    <div class="cbtns">
+      <a class="cbtn" href="tel:[TELEFONO]" data-en="📞 CALL [TELEFONO]" data-fi="📞 SOITA [TELEFONO]">📞 CALL [TELEFONO]</a>
+      <a class="cbtn ghost" href="https://wa.me/[WHATSAPP]?text=Hi!%20I%27d%20like%20to%20order%20%F0%9F%8C%99" data-en="💬 WhatsApp order" data-fi="💬 WhatsApp-tilaus">💬 WhatsApp order</a>
+    </div>
+  </div>
+</section>
+
+<nav class="stickybar">
+  <a href="tel:[TELEFONO]"><span class="ico">📞</span><span data-en="Call" data-fi="Soita">Call</span></a>
+  <a class="wa" href="https://wa.me/[WHATSAPP]"><span class="ico">💬</span><span data-en="WhatsApp" data-fi="WhatsApp">WhatsApp</span></a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=Vaasankatu+19+B,+00510+Helsinki" target="_blank" rel="noopener"><span class="ico">🧭</span><span data-en="Directions" data-fi="Reitti">Directions</span></a>
+</nav>
+
+<footer>
+  CITY KEBAB PIZZA KALLIO · VAASANKATU 19 B, HELSINKI<br>
+  <span data-en="Demo website — final menus, prices and contact details are added together with the owner." data-fi="Demosivusto — lopulliset listat, hinnat ja yhteystiedot lisätään yhdessä omistajan kanssa.">Demo website — final menus, prices and contact details are added together with the owner.</span>
+</footer>
+
+<script>
+function toggleLang(){
+  const html=document.documentElement;
+  const to=html.lang==='en'?'fi':'en';
+  html.lang=to;
+  document.querySelectorAll('[data-en]').forEach(el=>{
+    const t=el.dataset[to]; if(t!==undefined) el.innerHTML=t;
+  });
+  document.getElementById('langBtn').textContent = to==='en' ? 'FI' : 'EN';
+  try{localStorage.setItem('ck-lang',to)}catch(e){}
+}
+try{const s=localStorage.getItem('ck-lang'); if(s&&s!=='en'){document.documentElement.lang='en'; toggleLang();}}catch(e){}
+</script>
+</body>
+</html>
